@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 11, 2018 11:38:01 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Modelo.Empresa" table="empresa" catalog="oficina_de_empleo_db" optimistic-lock="version">
+        <id name="idempresa" type="java.lang.Integer">
+            <column name="idempresa" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="45" />
+        </property>
+        <property name="cuil" type="string">
+            <column name="cuil" length="45" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="45" />
+        </property>
+        <property name="rubro" type="string">
+            <column name="rubro" length="45" />
+        </property>
+        <property name="ceo" type="string">
+            <column name="ceo" length="45" />
+        </property>
+        <property name="actividad" type="string">
+            <column name="actividad" length="45" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>
