@@ -7,8 +7,8 @@
  * Author:  Ismael
  * Created: Oct 26, 2018
  */
-CREATE DATABASE IF NOT EXISTS `prueba_de_empleo_db`;
-USE `prueba_de_empleo_db`;
+CREATE DATABASE IF NOT EXISTS `oficina_de_empleo_db`;
+USE `oficina_de_empleo_db`;
 
 CREATE TABLE `empresa` (
   `idempresa` int(11) NOT NULL AUTO_INCREMENT,
