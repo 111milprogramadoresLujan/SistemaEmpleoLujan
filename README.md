@@ -7,3 +7,7 @@ PASOS PARA CONECTAR LA BD
 						Hibernate ver. 5.2.10
 3- En la clase Util reemplazar lineas "AnnotationConfiguration" por "Configuration".
 4- Eliminamos y volvemos a crear hibernate.cfg.xml.
+
+Links:
+https://dev.mysql.com/downloads/connector/j/5.1.html
+http://hibernate.org/orm/releases/5.2/
