@@ -15,7 +15,7 @@ public class UsuariosController {
     
     //metodo para revisar los usuarios registrados en la DB y permitir o no el accesio al menu principal del programa
     public static boolean Login(String nombre, String password) {
-        Session sesion = NewHibernateUtilS.getSessionFactory().openSession();
+        Session sesion = HibernateUtils.getSessionFactory().openSession();
 
         Usuarios usuario = (Usuarios) sesion.createCriteria(Usuarios.class).add(Restrictions.eq("nombre", nombre)).uniqueResult();
         if (usuario != null) {
@@ -38,7 +38,7 @@ public class UsuariosController {
     }
     //metodo para registrar un usuario a la DB y posteriormente poder logear con el (user y pass)
      public void agregarUsuario(Usuarios user) {
-        SessionFactory sesion = NewHibernateUtilS.getSessionFactory();
+        SessionFactory sesion = HibernateUtils.getSessionFactory();
         Session session;
         session = sesion.openSession();
         Transaction tx = session.beginTransaction();

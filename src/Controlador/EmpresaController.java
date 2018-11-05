@@ -23,13 +23,13 @@ public class EmpresaController {
 
 
    public static List<Empresa> MostrarEmpresa(){
-       Session sesion = NewHibernateUtilS.getSessionFactory().openSession();
+       Session sesion = HibernateUtils.getSessionFactory().openSession();
        List<Empresa> empresas = sesion.createCriteria(Empresa.class).list();
        return empresas;
    }
     
      public void agregarEmpresa(Empresa emp) {
-        SessionFactory sesion = NewHibernateUtilS.getSessionFactory();
+        SessionFactory sesion = HibernateUtils.getSessionFactory();
         Session session;
         session = sesion.openSession();
         Transaction tx = session.beginTransaction();
@@ -41,7 +41,7 @@ public class EmpresaController {
     }
     
  public void eliminarEmpresa(Empresa emp) {
-        SessionFactory sesion = NewHibernateUtilS.getSessionFactory();
+        SessionFactory sesion = HibernateUtils.getSessionFactory();
         Session session;
         session = sesion.openSession();
         Transaction tx = session.beginTransaction();
